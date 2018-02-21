@@ -1,15 +1,15 @@
 \||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||/
-|										 										 |
-|	  	    Lectures on Java : The IAM Core Project 							 |
-|																				 |
-|			 Professor : Thomas Broussard										 |
-|										 										 |
-|			   Qiaoyu Liu   &   Hao Xu											 |
-|																				 |
+|										 |
+|	  	    Lectures on Java : The IAM Core Project 			 |
+|										 |
+|			 Professor : Thomas Broussard				 |
+|										 |
+|			   Qiaoyu Liu   &   Hao Xu				 |
+|										 |
 /||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\
 
 
-								< HOW TO USE >
+				  < HOW TO USE >
 
 
 *[Administrator]
@@ -45,7 +45,7 @@ Username:	Xuhao
 Password:	111
 
 
-								< Acknowledgement >
+				  < Acknowledgement >
 
 *[Reference]
 
