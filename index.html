@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?><!-- DWXMLSource="test.xml" -->
+<!DOCTYPE html>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+xmlns:msxsl="urn:schemas-microsoft-com:xslt">
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+</link>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>  
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="images/img-01.png" alt="IMG">
+				</div>
+
+				<form class="login100-form validate-form">
+					<span class="login100-form-title">
+						Search Displayname
+					</span>
+
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" name="Displayname" placeholder="Displayname">
+                        <span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true">
+                            </i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" onClick="myClicked()">
+						Search
+                        <script>
+						function myClicked(){
+						var searchString = document.getElementsByClassName("input100")[0].value;
+						localStorage.setItem("key", searchString);
+						}
+						</script>    
+						</button>
+					</div>
+				</form>
+			</div>
+         </div>
+    <div class="row">
+        <div class="container-login100">
+       				<span class="login100-form-title" style="margin-top:100px; color:#FFF">
+						Scroll to Search
+					</span>
+            <div class="wrap-login100">
+                <div class="ibox-content" style="width:400px; margin-left:28%; padding-bottom:100px">
+
+                    <div class="hr-line-dashed"></div>
+                    <div class="search-result">
+					<form id="DisplayName" style="font-size:44px; padding-bottom:20px; backface-visibility:visible; background-color:#FFF">
+                    <script>
+					window.location.hash = '#DisplayName';
+					var xhttp = new XMLHttpRequest();
+					xhttp.onreadystatechange = function(){
+						myFunction(this);
+						}
+					xhttp.open("GET", "test.xml", true);
+					xhttp.send();
+					var searchString=localStorage.getItem("key");
+					function myFunction(xml) {
+					    var x, i, xmlDoc, doc_1, doc_2, doc_3;
+						
+						doc_1="Nothing Found.";
+						doc_2="";
+						doc_3="";
+					    xmlDoc = xml.responseXML;
+						x = xmlDoc.getElementsByTagName("identity");	
+						var length = x.length;
+						i=length-1;
+						while(i>=0){
+						var y = x[i].childNodes[0].childNodes[0].nodeValue;	
+						if(y==searchString){
+						doc_1 = x[i].childNodes[0].childNodes[0].nodeValue; 
+						doc_2 = x[i].childNodes[1].childNodes[0].nodeValue; 
+						doc_3 = x[i].childNodes[2].childNodes[0].nodeValue;
+						break;
+						}
+						i--;
+						}
+						document.getElementById("DisplayName").innerHTML = doc_1;
+						document.getElementById("UID").innerHTML = "User ID: "+doc_2;
+						document.getElementById("EMAIL").innerHTML = "E-mail: "+doc_3;
+					}
+                    </script>
+                    The Nothingness
+					</form>
+                    <form id="UID" style="padding-left:10px">	  
+					</form>
+                    <div class="hr-line-dashed"></div>
+                    <form id="EMAIL" style="padding-left:10px">
+					</form>
+                    <div class="hr-line-dashed"></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                   
+
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script type="text/javascript"></script>
+<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<script src="vendor/bootstrap/js/popper.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/select2/select2.min.js"></script>
+<script src="vendor/tilt/tilt.jquery.min.js"></script>
+<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
+</xsl:template>
+</xsl:stylesheet>

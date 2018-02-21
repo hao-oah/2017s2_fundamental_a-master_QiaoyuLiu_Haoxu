@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="BankAccountSystem/src"/>
+	<classpathentry kind="src" path="iam-core-ref/test/test/test/test/test"/>
+	<classpathentry excluding="test/" kind="src" path="iam-core-ref/test/test/test/test"/>
+	<classpathentry excluding="test/|test/test/" kind="src" path="iam-core-ref/test/test/test"/>
+	<classpathentry excluding="test/|test/test/|test/test/test/" kind="src" path="iam-core-ref/test/test"/>
+	<classpathentry kind="src" path="epita-logger-ref/src"/>
+	<classpathentry kind="src" path="epita-logger-ref/test"/>
+	<classpathentry kind="src" path="Geometry/src"/>
+	<classpathentry kind="src" path="iam-core-ref/src"/>
+	<classpathentry excluding="test/|test/test/|test/test/test/|test/test/test/test/" kind="src" path="iam-core-ref/test"/>
+	<classpathentry kind="lib" path="iam-core-ref/lib/derbyclient.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
