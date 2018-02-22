@@ -1,0 +1,15 @@
+fr.epita.bank.datamodel
+fr.epita.bank.launcher
+fr.epita.bank.services.ui
+fr.epita.geometry.datamodel
+fr.epita.geometry.launcher
+fr.epita.geometry.services
+fr.epita.iam.datamodel
+fr.epita.iam.exceptions
+fr.epita.iam.launcher
+fr.epita.iam.services
+fr.epita.iam.services.configuration
+fr.epita.iam.services.dao
+fr.epita.logger
+fr.epita.logger.test
+test
